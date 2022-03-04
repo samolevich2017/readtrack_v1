@@ -3,6 +3,10 @@
     --menu-min-width: 85px;
 }
 
+body{
+    overflow-y: hidden;
+}
+
 .burger-menu{
     position: relative;
     max-width: var(--menu-max-width);
@@ -191,6 +195,44 @@
     background-color: #55529C;
 }
 
+/* Tooltip for menu list */
+.burger-menu__logoutbtn .menu_tooltiptext, 
+.burger-menu .menu_tooltiptext{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #7868E6;
+    color: #fff;
+    text-align: center;
+    top: 10%;
+    left: var(--menu-min-width);
+    padding: 5px 0;
+    border-radius: 6px;
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.burger-menu__logoutbtn .menu_tooltiptext::after,
+.burger-menu .menu_tooltiptext::after{
+    content: "";
+    position: absolute;
+    top: 33%;
+    left: 0;
+    transform: rotate(90deg);
+    margin-left: -17px;
+    border-width: 9px;
+    border-style: solid;
+    border-color: #7868E6 transparent transparent transparent;
+}
+
+.burger-menu.hidden .burger-menu__logoutbtn:hover .menu_tooltiptext,
+.burger-menu.hidden li:hover .menu_tooltiptext{
+    visibility: visible;
+    opacity: 1;
+}
 
 /* ---------------- Адаптив для нетбуков (<= 1024px) ---------------- */
 @media (max-width: 1024px) {
@@ -294,6 +336,22 @@
         font-size: 14px;
     }
 
+    .burger-menu__logoutbtn .menu_tooltiptext, 
+    .burger-menu .menu_tooltiptext{
+        height: 28px;
+        line-height: 28px;
+        top: 12%;
+    }
+
+    .burger-menu__logoutbtn .menu_tooltiptext::after,
+    .burger-menu .menu_tooltiptext::after{
+        top: 30%;
+        margin-left: -15px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: #7868E6 transparent transparent transparent;
+    }
+
 }
 
 /* ---------------- Адаптив для смартфонов (от 320px до 768px) ---------------- */
@@ -303,9 +361,10 @@
     кнопка закрытия шторки опускается в саммый низ, а кнопка (выйти) прижимается ко всем
     остальным пунктам
     */
+
+    /* Подсказки всплывающие не нужны */
+    
 }
-
-
 
 @keyframes anim-burger-close {
     0%{
