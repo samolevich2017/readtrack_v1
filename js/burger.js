@@ -19,3 +19,25 @@ burger_btn.addEventListener("click", function(){
     }
 
 });
+
+// добавляем обработчик события *наведения* мыши на пункт меню
+// показывает всплывающую подсказку
+block_menu.querySelectorAll("li").forEach((el)=>{
+    el.addEventListener("mouseover", function(){
+        if(!block_menu.classList.contains("opened"))
+            this.style.overflow = "visible";
+    });
+
+    el.addEventListener("mouseleave", function(){
+        this.style.overflow = "hidden";
+    });
+});
+
+let btnLogOut = document.getElementsByClassName("burger-menu__logoutbtn")[0];
+btnLogOut.addEventListener("mouseover", function(){
+    this.style.overflow = "visible";
+});
+
+btnLogOut.addEventListener("mouseleave", function(){
+    this.style.overflow = "hidden";
+});
