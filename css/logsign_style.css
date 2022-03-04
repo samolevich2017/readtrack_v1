@@ -1,4 +1,5 @@
 /* Стили для страниц авторизации и регистрации */
+
 body{
     margin: 0;
     padding: 0;
@@ -94,7 +95,7 @@ h2.label_Text{
 .loginbtn{
     width: 186px;
     height: 37px;
-    top: 10px;
+    top: 20px;
     background-color: #7868E6;
     opacity: 100%;
     display: flex;
