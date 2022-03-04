@@ -1,11 +1,16 @@
+:root{
+    --menu-max-width: 270px;
+    --menu-min-width: 85px;
+}
+
 .burger-menu{
     position: relative;
-    max-width: 270px;
+    max-width: var(--menu-max-width);
     background-color: #B8B5FF;
     height: 100vh;
     display: flex;
     flex-direction: column;
-   
+    animation-duration: 0.3s;
 }
 
 /* Шапка меню - Лого*/
@@ -57,6 +62,7 @@
     background-color: #fff;
     transform: rotate(45deg);
 }
+
 
 .burger-menu__header .btn-burger:hover::before,
 .burger-menu__header .btn-burger:hover::after{
@@ -127,4 +133,196 @@
     height: 2px;
     width: 100%;
     background-color: #fff;
+}
+
+.burger-menu.hidden{
+    max-width: 85px;
+    
+}
+
+.burger-menu.hidden .burger-menu__header img {
+    height: 58px;    
+}
+
+.burger-menu.hidden .burger-menu__header{
+    padding-top: 70px;
+}
+
+.burger-menu.hidden .btn-burger{
+    position: absolute;
+    display: flex;
+    align-self: center;
+    height: 52px;
+    top: 10px;
+    left: 48%;
+}
+
+.burger-menu.hidden .btn-burger::after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 4px;
+    height: 30px;
+    background-color: #fff;
+    transform: rotate(90deg);
+}
+
+.burger-menu.hidden .btn-burger::before{
+    content: "";
+    position: absolute;
+    top: 8px;
+    width: 4px;
+    height: 30px;
+    background-color: #fff;
+    transform: rotate(90deg);
+}
+
+.burger-menu.hidden .btn-burger > span{
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    background-color: #fff;
+    transform: rotate(90deg);
+}
+
+.burger-menu.hidden .btn-burger:hover > *,
+.burger-menu.hidden .btn-burger:hover::after,
+.burger-menu.hidden .btn-burger:hover::before{
+    background-color: #55529C;
+}
+
+
+/* ---------------- Адаптив для нетбуков (<= 1024px) ---------------- */
+@media (max-width: 1024px) {
+
+    .burger-menu{
+        --menu-max-width: 220px;
+        max-width: var(--menu-max-width);
+    }
+
+    .burger-menu.hidden{
+        --menu-min-width: 75px;
+        max-width: var(--menu-min-width);
+    }
+
+    .burger-menu__header img{
+        height: 120px;    
+    }
+
+    .burger-menu__header .btn-burger{
+        width: 25px;
+        height: 25px;
+    }
+
+    .burger-menu__logoutbtn img,
+    .burger-menu__nav .burger-menu__navlist>li>a>img{
+        max-width: 32px;
+        max-height: 32px;
+    }
+
+    .burger-menu__logoutbtn,
+    .burger-menu__nav .burger-menu__navlist>li{
+        height: 55px;
+        line-height: 55px;
+    }
+
+    .burger-menu__logoutbtn button,
+    .burger-menu__nav .burger-menu__navlist>li>a{
+        padding-left: 20px;
+        font-size: 16px;
+    }
+
+    .burger-menu.hidden .btn-burger{
+        
+        height: 47px;
+    }
+    
+    .burger-menu.hidden .btn-burger::before,
+    .burger-menu.hidden .btn-burger::after,
+    .burger-menu.hidden .btn-burger > span{
+        width: 3px;
+        height: 26px;
+    }
+   
+
+}
+
+/* ---------------- Адаптив для планшетов (<= 768px) ---------------- */
+@media (max-width: 768px){
+    /* По идее на планшетах меню по умл. в свернутом варианте. А при
+    выборе какого-либо пункта - сразу закрывается меню. Поэтому особо ничего 
+    менять не будем. Кроме размеров иконок и шрифта.        
+    */
+
+    .burger-menu{
+        --menu-max-width: 200px;
+        max-width: var(--menu-max-width);
+    }
+
+    .burger-menu.hidden{
+        --menu-min-width: 65px;
+        max-width: var(--menu-min-width);
+    }
+
+    .burger-menu.hidden #logo{
+        height: 50px;    
+    }
+
+    #logo{
+        height: 75px;
+    }
+
+    .burger-menu__header .btn-burger{
+        width: 18px;
+        height: 18px;
+    }
+
+    .burger-menu__logoutbtn img,
+    .burger-menu__nav .burger-menu__navlist>li>a>img{
+        max-width: 24px;
+        max-height: 24px;
+    }
+
+    .burger-menu__logoutbtn,
+    .burger-menu__nav .burger-menu__navlist>li{
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .burger-menu__logoutbtn button,
+    .burger-menu__nav .burger-menu__navlist>li>a{
+        font-size: 14px;
+    }
+
+}
+
+/* ---------------- Адаптив для смартфонов (от 320px до 768px) ---------------- */
+@media (min-width: 320px) {
+    /* Делаем шторку и прижимаем к верхней части. На шторке будет название и бургер.
+    При нажатии на бургер будет опускаться шторка на всю ширину экрана. Структура меняется:
+    кнопка закрытия шторки опускается в саммый низ, а кнопка (выйти) прижимается ко всем
+    остальным пунктам
+    */
+}
+
+
+
+@keyframes anim-burger-close {
+    0%{
+        max-width: var(--menu-max-width);
+    }
+
+    100%{
+        max-width: var(--menu-min-width);
+    }
+}
+
+@keyframes anim-burger-open {
+    0%{
+        max-width: var(--menu-min-width);
+    }
+
+    100%{
+        max-width: var(--menu-max-width);
+    }
 }
