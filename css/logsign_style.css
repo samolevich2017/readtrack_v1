@@ -1,1 +1,121 @@
 /* Стили для страниц авторизации и регистрации */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 700px;
+    height: 700px;
+    background-color: #E4FBFF;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+}
+.logo{
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    position: absolute;
+        top: 17%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+}
+.logoImg{
+    border-radius: 50%;
+    background: rgba(120, 104, 230, 0.3);
+    opacity: 30%;
+}
+.logoText{
+    color: #7868E6;
+    margin-left: -22px;
+}
+.form_area{
+    float: left;
+    margin-top: 100px;
+}
+.form-container{
+    width: 423px;
+    height: 435px;
+    position: absolute;
+        top: 60%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    background: rgba(120, 104, 230, 0.3);
+    opacity: 90%;
+}
+.btn{
+    position: absolute;
+        top: 10%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+.Google_btn{
+    width: 349px;
+    height: 38px;
+    background-color: rgba(204, 0, 0, 0.8);
+    display: inline-flex;
+    position: absolute;
+        top: 20%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+}
+.img_G{
+    width: 35px;
+    height: 31px;
+}
+.text_G{
+    margin: auto;
+    top: 2%;
+    color: white;
+}
+.label_btn{
+    position: relative;
+    margin-top: 100px;
+    padding-left: 45px;
+    display: inline-block;
+}
+.email, .psw, .loginbtn{
+    margin: 0 auto;
+}
+h2.label_Text{
+    margin: 10px auto;
+    color: #7868E6;
+}
+.input_enter{
+    width: 333px;
+    height: 33px;
+}
+.loginbtn{
+    width: 186px;
+    height: 37px;
+    top: 20px;
+    background-color: #7868E6;
+    opacity: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.btn_Text{
+    color: #B8B5FF;
+}
+.psw_down{
+    width: 186px;
+    height: 37px;
+    top: 10px;
+    /* opacity: 100%; */
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 0 auto;
+    color: #7868E6;
+}
