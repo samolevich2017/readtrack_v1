@@ -10,12 +10,24 @@ burger_btn.addEventListener("click", function(){
     if(block_menu.classList.contains('opened')){
         // закрываем
         block_menu.classList.replace('opened', 'hidden');
-        block_menu.style.animationName = 'anim-burger-close';
+
+        // проверяем - не с телефона ли открыто приложение
+        // если нет, то назначаем обычную анимацию, а иначе анимацию для мобилок
+        if(window.screen.width > 460)
+            block_menu.style.animationName = 'anim-burger-close';
+        else    
+            block_menu.style.animationName = 'anim-burger-mob-close';
     }
     else{
         // открываем
         block_menu.classList.replace('hidden', 'opened');
-        block_menu.style.animationName = 'anim-burger-open';
+
+        // проверяем - не с телефона ли открыто приложение
+        // если нет, то назначаем обычную анимацию, а иначе анимацию для мобилок
+        if(window.screen.width > 460)
+            block_menu.style.animationName = 'anim-burger-open';
+        else
+            block_menu.style.animationName = 'anim-burger-mob-open';
     }
 
 });
