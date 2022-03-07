@@ -85,17 +85,20 @@ body{
     left: 15px;
     margin-top: 8px;
 }
-.checkbox__notRobot{
+.checkbox__notRobot,
+.field_checkbox_remember{
     position: relative;
     display: inline-flex;
     height: 25px;
     width: 80%;
     margin-top: 10px;
-    
+    margin-left: 42px;
 }
+.field_checkbox_remember,
 .checkbox__notRobot label{
     margin-left: 25px;
 }
+.field_checkbox_remember,
 .checkbox__notRobot input{
     position: absolute;
     border: none;
@@ -103,6 +106,7 @@ body{
     outline: none;
     left: 0;
 }
+.field_checkbox_remember,
 .checkbox__notRobot input::before{
     content: '';
     display: inline-block;
@@ -163,4 +167,27 @@ body{
     color: #333c;
     padding: 3px 0;
     max-width: 100%;
+}
+.btnLog{
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 3px;
+    margin-left: 10px;
+    width: 100px;
+    height: 35px;
+    border-radius: 25px;
+    background-color: #95caf9;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+.orSpan::before{
+    content: "";
+    position: absolute;
+    margin-top: 10px;
+    display: inline-block;
+    border-bottom: 2px solid #333333;
+    height: 5px;
+    width: 50px;
 }
