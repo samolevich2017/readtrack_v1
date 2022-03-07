@@ -19,18 +19,40 @@
                 <div class="form">
                     <form class="formLogIn" action="#" method="post">
                         <div class="fields">
-                            <div class="field_email"></div>
-                            <div class="field_password"></div>
-                            <div class="field_checkbox_remember"></div>
-                            <div class="btnLogIn"></div>
+                            <div class="field_email">
+                                <span>📧</span>
+                                <input type="email" name="email" placeholder="E-mail">
+                            </div>
+                            <div class="field_password">
+                                <span>🔑</span>
+                                <input type="password" name="password" placeholder="Пароль">
+                            </div>
+                            <div class="field_checkbox_remember">
+                                <label class="lbRememberCheckBox" for="remember_Checkbox">Запомнить</label>
+                                <input id="remember_Checkbox" type="checkbox">
+                            </div>
+                            <div class="btnLogIn">
+                                <button class="btnLog" type="button">Войти</button>
+                            </div>
                         </div>
-                        <div class="orSpan"></div>
+                        <span class="orSpan" style="display: flex; justify-content: center; font-size: 13px;">или</span>
                         <div class="blockAuthorizationMethod">
-                            <button type="button" class="btnSignUp"></button>
+                            <button type="button" class="btnSignUp">
+                                <ul class="authMethodList">
+                                    <li class="authMethodListItem">
+                                        <button name="btnLogInWithGoogle">
+                                            <img src="../img/google.png" alt="">
+                                        </button>
+                                    </li>
+                                    <!-- <li class="authMethodListItem">
+                                        <button name="btnLogInWithVK">
+                                            <img src="../img/vk.png" alt="">
+                                        </button>
+                                        </li> -->
+                                </ul>
+                            </button>
                         </div>
-                        
-
-
+                        <button type="button" class="btnSignUp" id="btnSwapToSignUp">Регистрация</button>
                     </form>
                 </div>
 
