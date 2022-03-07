@@ -1,167 +1,143 @@
 /* Стили для страниц авторизации и регистрации */
+@font-face {
+    font-family: 'EngFont';
+    src: url('../fonts/englishFont.ttf');
+    
+    font-style: normal;
+    font-weight: normal;
+}
 
 body{
     margin: 0;
     padding: 0;
 }
+.content{
+    display: block;
+}
 .container{
-    width: 700px;
-    height: 700px;
-    background-color: #E4FBFF;
-    position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-}
-.logo{
-    width: 150px;
-    height: 150px;
-    border-radius: 30%;
-    position: absolute;
-        top: 17%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-}
-.logoImg{
-    border-radius: 50%;
-    background: rgba(120, 104, 230, 0.3);
-    opacity: 30%;
-}
-.logoText{
-    color: #7868E6;
-    margin-left: -22px;
-}
-.form_area{
-    float: left;
-    margin-top: 100px;
-}
-.form-container{
-    width: 423px;
-    height: 435px;
-    position: absolute;
-        top: 60%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    background: rgba(120, 104, 230, 0.3);
-    opacity: 90%;
-}
-.btn{
-    position: absolute;
-        top: 10%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
-}
-.Google_btn{
-    width: 349px;
-    height: 38px;
-    background-color: rgba(204, 0, 0, 0.8);
-    display: inline-flex;
-    position: absolute;
-        top: 20%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-}
-.img_G{
-    width: 35px;
-    height: 31px;
-}
-.text_G{
-    margin: auto;
-    top: 2%;
-    color: white;
-}
-.label_btn{
-    position: relative;
-    margin-top: 100px;
-    padding-left: 45px;
-    display: inline-block;
-}
-.email, .psw, .loginbtn{
+    max-width: 1180px;
     margin: 0 auto;
+    padding: 0 10px;
 }
-h2.label_Text{
-    margin: 10px auto;
-    color: #7868E6;
-}
-.input_enter{
-    width: 333px;
-    height: 33px;
-}
-.loginbtn{
-    width: 186px;
-    height: 37px;
-    top: 20px;
-    background-color: #7868E6;
-    opacity: 100%;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-}
-.btn_Text{
-    color: #B8B5FF;
-}
-.psw_down{
-    width: 186px;
-    height: 37px;
-    top: 10px;
-    /* opacity: 100%; */
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+.block__form__signup{
+    display: block;
     margin: 0 auto;
-    color: #7868E6;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border-radius: 5%;
+    border: #333c solid 2px;
+    min-width: 295px;
+    width: 380px;
+    max-width: 100%;
+    height: 400px;
+    background-color: whitesmoke;
 }
-.form-container_1{
-    width: 423px;
-    height: 435px;
-    position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    background: rgba(120, 104, 230, 0.3);
-    opacity: 90%;
-    justify-content: center;
+.title__form__signup{
+    text-align: center;
+    color: #333c;
+    padding: 3px 0;
+    max-width: 100%;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
-h1.blockName{
-    color: rgba(120, 104, 230, 1);
+.form{
+    margin-top: 30px;
+    display: block;
 }
-.blockText{
-    box-sizing: border-box;
-    margin: 16px 0px 0px;
-    min-width: 0;
-}
-.block_p{
-    box-sizing: border-box;
-    margin: 0;
-    min-width: 0;
-    color: rgba(120, 104, 230, 1);
-    opacity: 90%;
-}
-.verify_block{
-    box-sizing: border-box;
-    margin: 0px 0px 24px;
-    min-width: 0;
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='text']{
     width: 100%;
-}
-.verify_name{
-    display: flex;
-    box-sizing: border-box;
-    margin: 0px 0px 4px;
-    min-width: 0px;
-    font-weight: 400;
+    height: 30px;
+    line-height: 30;
+    padding: 5px 0 5px 45px;
+    outline: none;
     font-size: 14px;
-    line-height: 20px;
-    width: 100%;
-    align-items: center;
-    color: rgba(120, 104, 230, 1);
+    border: none;
+    border-radius: 60px;
+    color: #333c;
+    font-weight: bold;
+}
+.fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 3;
+    justify-items: center;
+}
+.fieldsInp{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.field__email,
+.field__login, 
+.field__password{
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.field__email span,
+.field__password span,
+.field__login span{
+    position: absolute;
+    display: flex;
+    left: 15px;
+    margin-top: 8px;
+}
+.checkbox__notRobot{
+    position: relative;
+    display: inline-flex;
+    height: 25px;
+    width: 80%;
+    margin-top: 10px;
+    
+}
+.checkbox__notRobot label{
+    margin-left: 25px;
+}
+.checkbox__notRobot input{
+    position: absolute;
+    border: none;
+    background: #333333;
+    outline: none;
+    left: 0;
+}
+.checkbox__notRobot input::before{
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-top: -2px;
+    margin-left: -4px;
+}
+.btnSignUpSubmitDiv{
+    display: block;
+}
+.btnSignUpSubmit{
+    display: block;
+    margin: 0px auto;
     cursor: pointer;
+    text-transform: uppercase;
+    width: 180px;
+    height: 35px;
+    border-radius: 25px;
+    background-color: #95caf9;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+}
+.btnSwapToLogInForm button{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-top: 5px;
+    text-transform: uppercase;
+    color: #333333;
+    outline: none;
 }
