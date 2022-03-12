@@ -10,7 +10,7 @@ body{
 .burger-menu{
     position: relative;
     max-width: var(--menu-max-width);
-    background-color: #B8B5FF;
+    background-color: #2A2235;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -37,6 +37,7 @@ body{
 
 #hidden_menu_logo{
     display: none;
+    color: #FFF;
 }
 
 .burger-menu__header img{
@@ -58,7 +59,7 @@ body{
     position: absolute;
     width: 3px;
     height: 25px;
-    background-color: #fff;
+    background-color: #A8A8BA;
     transform: rotate(-45deg);
 }
 
@@ -67,14 +68,14 @@ body{
     position: absolute;
     width: 3px;
     height: 25px;
-    background-color: #fff;
+    background-color: #A8A8BA;
     transform: rotate(45deg);
 }
 
 
 .burger-menu__header .btn-burger:hover::before,
 .burger-menu__header .btn-burger:hover::after{
-    background-color: #55529C;
+    background-color: #9A88B3;
 }
 
 /* Пункты меню */
@@ -94,10 +95,31 @@ body{
     overflow: hidden;
 }
 
-.burger-menu__logoutbtn button:hover,
-.burger-menu__navitem__active,
-.burger-menu__nav .burger-menu__navlist>li:hover{
-    background-color: #7868E6;
+.burger-menu__logoutbtn::before,
+.burger-menu__nav .burger-menu__navlist>li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #fff;
+    visibility: hidden;
+    border-radius: 5px;
+}
+
+
+.burger-menu__navlist>li.burger-menu__navitem__active::before{
+    visibility: visible;
+}
+
+.burger-menu__navlist>li.burger-menu__navitem__active>a>span{
+    color: #FFF;
+}
+
+.burger-menu__logoutbtn button:hover>span,
+.burger-menu__nav .burger-menu__navlist>li:hover,
+.burger-menu__nav .burger-menu__navlist>li:hover>a{
+    color: #b292df;
 }
 
 .burger-menu__logoutbtn button,
@@ -108,7 +130,7 @@ body{
     width: 100%;
     text-decoration: none;
     margin: 0;
-    color: #fff;
+    color: #A8A8BA;
     font-size: 18px;
     align-items: center;
     padding-left: 24px;
@@ -126,7 +148,7 @@ body{
     position: relative;
     outline: none;
     border: none;
-    background-color: #B8B5FF;
+    background-color: #2A2235;
     cursor: pointer;
 }
 
@@ -140,7 +162,7 @@ body{
     display: block;
     height: 2px;
     width: 100%;
-    background-color: #fff;
+    background-color: #5C5C74;
 }
 
 .burger-menu.hidden{
@@ -149,7 +171,7 @@ body{
 }
 
 .burger-menu.hidden .burger-menu__header img {
-    height: 58px;    
+    height: 66px;    
 }
 
 .burger-menu.hidden .burger-menu__header{
@@ -171,7 +193,7 @@ body{
     bottom: 5px;
     width: 4px;
     height: 30px;
-    background-color: #fff;
+    background-color: #A8A8BA;
     transform: rotate(90deg);
 }
 
@@ -181,7 +203,7 @@ body{
     top: 8px;
     width: 4px;
     height: 30px;
-    background-color: #fff;
+    background-color: #A8A8BA;
     transform: rotate(90deg);
 }
 
@@ -189,14 +211,14 @@ body{
     position: absolute;
     width: 4px;
     height: 30px;
-    background-color: #fff;
+    background-color: #A8A8BA;
     transform: rotate(90deg);
 }
 
 .burger-menu.hidden .btn-burger:hover > *,
 .burger-menu.hidden .btn-burger:hover::after,
 .burger-menu.hidden .btn-burger:hover::before{
-    background-color: #55529C;
+    background-color: #9A88B3;
 }
 
 /* Tooltip for menu list */
@@ -207,16 +229,20 @@ body{
     width: 120px;
     height: 35px;
     line-height: 35px;
-    background-color: #7868E6;
+    background-color: #5C5C74;
     color: #fff;
     text-align: center;
     top: 10%;
-    left: var(--menu-min-width);
+    left: calc(var(--menu-min-width) - 25%);
     padding: 5px 0;
     border-radius: 6px;
     margin-left: 10px;
     opacity: 0;
     transition: opacity 0.3s;
+}
+
+.burger-menu.hidden li>a>span{
+    visibility: hidden;
 }
 
 .burger-menu__logoutbtn .menu_tooltiptext::after,
@@ -229,7 +255,7 @@ body{
     margin-left: -17px;
     border-width: 9px;
     border-style: solid;
-    border-color: #7868E6 transparent transparent transparent;
+    border-color: #5C5C74 transparent transparent transparent;
 }
 
 .burger-menu.hidden .burger-menu__logoutbtn:hover .menu_tooltiptext,
@@ -406,7 +432,7 @@ body{
         display: block;
         line-height: 45px;
         font-weight: bold;
-        color:#55529C;
+        color:#FFF;
         font-size: 22px;
     }
 

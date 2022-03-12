@@ -38,18 +38,34 @@ block_menu.querySelectorAll("li").forEach((el)=>{
     el.addEventListener("mouseover", function(){
         if(!block_menu.classList.contains("opened"))
             this.style.overflow = "visible";
+        
+        // меняем иконки пунктов меню
+        let icon = this.getElementsByTagName("img")[0];
+        let icon_alt = icon.getAttribute("alt");
+
+        if(!this.classList.contains("burger-menu__navitem__active"))
+            icon.src = `../img/icons/${icon_alt}-hover.png`; 
     });
 
     el.addEventListener("mouseleave", function(){
         this.style.overflow = "hidden";
+
+        // меняем иконки пунктов меню
+        let icon = this.getElementsByTagName("img")[0];
+        let icon_alt = icon.getAttribute("alt");
+
+        if(!this.classList.contains("burger-menu__navitem__active"))
+            icon.src = `../img/icons/${icon_alt}-default.png`;
     });
 });
 
 let btnLogOut = document.getElementsByClassName("burger-menu__logoutbtn")[0];
 btnLogOut.addEventListener("mouseover", function(){
     this.style.overflow = "visible";
+    this.getElementsByTagName("img")[0].src = `../img/icons/logout-hover.png`; 
 });
 
 btnLogOut.addEventListener("mouseleave", function(){
     this.style.overflow = "hidden";
+    this.getElementsByTagName("img")[0].src = `../img/icons/logout-default.png`; 
 });
