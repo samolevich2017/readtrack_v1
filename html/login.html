@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/logsign_style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>ReadTrack</title>
 </head>
 <body>
-    
+    <div class="content">
+
+        <div class="container">
+
+            <div class="block__form__Log" id="block__form__Log">
+                <div class="title_form">
+                    <h1>Авторизация</h1>
+                    <!-- <div class="block_message"  style="display: flex; justify-content: center; font-size: 12px; letter-spacing: 1px">
+                        <p>Пользователь с таким E-mail уже существует!</p>
+                    </div> -->
+                </div>
+                <hr/>
+                <div class="form" >
+                    <form class="formLogIn" action="profile.html" method="post">
+                        <div class="fields">
+                            <div class="field_Email fieldsInp">
+                                <span>&#128231;</span>
+                                <input type="email" name="email" placeholder="E-mail" />
+                            </div>
+                            <div class="field_Password fieldsInp">
+                                <span>&#128273;</span>
+                                <input type="password" name="password" placeholder="Пароль" />
+                            </div>
+                            <div class="checkbox_remember">
+                                <label id="lbRememberCheckBox" for="remember_Checkbox">Запомнить</label>
+                                <input id="remember_Checkbox" type="checkbox">
+                            </div>
+                            <div class="btnLogIn">
+                                <button class="btnLog" type="button"><a href="profile.html" style="text-decoration: none; color: #fff;">Войти</a></button>
+                            </div>
+                        </div>
+                        <span class="orSpan" style="display: flex; justify-content: center; font-size: 13px">или</span>
+                        <div class="blockAuthorizationMethods">
+                            <ul class="authMethodsList">
+                                <li class="authMethodListItem">
+                                    <button name="btnLogInWithGoogle">
+                                        <img src="../img/google.png" alt="">
+                                    </button>
+                                </li>
+                                <!-- <li class="authMethodListItem">
+                                    <button name="btnLogInWithTG">
+                                        <img src="../img/pngwing.com.png" alt="">
+                                    </button>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <button type="button" class="btnSignUp" id="btnSwapToSignUp">Регистрация</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
