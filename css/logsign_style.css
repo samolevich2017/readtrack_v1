@@ -1,9 +1,11 @@
 /* Стили для страниц авторизации и регистрации */
+
+/* Как бы это дело сохранить-то */
+
 @font-face {
     font-family: Tahoma;
     src: url(../fonts/Tahoma.ttf);
 }
-
 
 .container{
     max-width: 1180px;
