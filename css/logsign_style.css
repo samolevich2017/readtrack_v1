@@ -1,7 +1,5 @@
 /* Стили для страниц авторизации и регистрации */
 
-/* Как бы это дело сохранить-то */
-
 @font-face {
     font-family: Tahoma;
     src: url(../fonts/Tahoma.ttf);
@@ -22,7 +20,7 @@
     min-width: 295px;
     width: 380px;
     max-width: 100%;
-    height: 510px;
+    height: 570px;
     background-color: whitesmoke;
 }
 .title_form {
@@ -47,6 +45,8 @@
     display: flex;
     justify-content: center;
     width: 80%;
+    padding: 5px 0 5px;
+    top: 25%;
 }
 .field_Email span,
 .field_Password span,
@@ -55,7 +55,7 @@
     display: flex;
     left: 15px;
     /* line-height: 40; */
-    top: 5px;
+    top: 12px;
 }
 .form input[type="email"],
 .form input[type="password"],
@@ -93,7 +93,7 @@
     display: inline-block;
     height: 25px;
     width: 80%;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 42px;
 }
 .checkbox_remember input,
@@ -250,6 +250,10 @@
     color: #95caf9;
 }
 
+.block__auth{
+    height: 
+}
+
 @media (max-width: 425px){
     .title_form{
         text-align: center;
@@ -272,3 +276,5 @@
         border-radius: 8%;
     }
 }
+
+/* Стили для авторизации */
