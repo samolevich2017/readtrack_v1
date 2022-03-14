@@ -1,48 +1,63 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/logsign_style.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/logsign_style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>ReadTracker</title>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img  class="logoImg" src="/img/Енот.jpg" alt="Лого">
-            <h1 class="logoText">Регистрация</h1>
-        </div>
-        <form  class="form_area" action="#">
-            <div class="form-container">
-                <button class="btn Google_btn" href="#" alt="">
-                    <img class="img_G" src="/img/google-logo-24.png">
-                    <h2 class="text_G">Войти с помощью Google</h2>
-                </button>
-                <div class="label_btn">
-                    <label for="email" class="email"><h2 class="label_Text">E-mail</h2></label>
-                    <input class="input_enter" type="text" placeholder="Введите почту" name="email">
-
-                    <label for="psw" class="psw"><h2 class="label_Text">Пароль</h2></label>
-                    <input class="input_enter" type="password" placeholder="Введите пароль" name="psw">
-
-                    <label for="psw" class="psw"><h2 class="label_Text">Повторите пароль</h2></label>
-                    <input class="input_enter" type="password" placeholder="Введите пароль" name="psw">
-
-                    <button class="loginbtn" type="submit"><h3 class="btn_Text">Создать</h3></button>
-                
-                  
-                </div>
+    <div class="content">
+        <div class="container">
+        <div class="block__form__signup" style="height: 510px;" >
+            <div class="title__form__signup">
+                <h1>Регистрация</h1>
             </div>
-            
+            <hr>
+            <div class="form">
+                <form  class="form_signup" action="#">
+                    <div class="fields">
+                        <div class="field__login fieldsInp">
+                            <span>✍️</span>
+                            <input type="text" placeholder="ФИО">           
+                        </div>
+                        <div class="field__login fieldsInp">
+                            <span>👤</span>
+                            <input type="text" placeholder="Логин">
+                        </div>
+                        <div class="field__email fieldsInp">
+                            <span>📧</span>
+                            <input type="email" placeholder="E-mail">
+                        </div>
+                        <div class="field__password fieldsInp">
+                            <span>🔑</span>
+                            <input type="password" placeholder="Пароль">
+                        </div>
+                        <div class="field__password fieldsInp">
+                            <span>🔑</span>
+                            <input type="password" placeholder="Подтвердите пароль">
+                        </div>
+                        <div class="checkbox__notRobot fieldsInp" style="margin-left: 0px;">
+                            <label id="lbNotRobot_Checkbox" for="notRobot">Я не робот</label>
+                            <input id="notRobot_Checkbox" type="checkbox">
+                        </div>
+                    </div>
+                    <div class="btnSignUpSubmitDiv">
+                        <button class="btnSignUpSubmit" type="submit">Зарегистрироваться</button>
+                    </div>
+                    <div class="btnSwapToLogInForm">
+                        <button id="btnSwapToLogIn" type="button">Вход</button>
+                    </div>
 
 
 
 
 
-        </form>
-
+                </form>
+            </div>
+        </div>
         
 
          
@@ -56,6 +71,7 @@
 
 
 
+        </div>
     </div>
 </body>
 </html>
