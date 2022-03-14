@@ -241,6 +241,7 @@ body{
     transition: opacity 0.3s;
 }
 
+.burger-menu.hidden .burger-menu__logoutbtn button>span,
 .burger-menu.hidden li>a>span{
     visibility: hidden;
 }
